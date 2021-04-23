@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="" />
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Init начало">
+      <change afterPath="$PROJECT_DIR$/views/default/index.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/mainFunction.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/mainFunction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +25,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rYxtK4fEf2stjg0YvPWibmkwTK" />
   <component name="ProjectViewState">
@@ -30,16 +49,50 @@
       <option name="presentableId" value="Default" />
       <updated>1619167037904</updated>
       <workItem from="1619167039011" duration="5616000" />
+      <workItem from="1619178433336" duration="1301000" />
+      <workItem from="1619180511716" duration="1632000" />
     </task>
+    <task id="LOCAL-00001" summary="Init начало">
+      <created>1619178505570</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619178505570</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init начало" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init начало" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="830" y="478" key="Github.ShareDialog" timestamp="1619178573977">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="830" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619178573977" />
     <state x="794" y="503" key="NewPhpFileDialog" timestamp="1619177106201">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619177106201" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619178522448">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619178522448" />
   </component>
 </project>
