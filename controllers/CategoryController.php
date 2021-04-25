@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Контроллер страницы категории
+ * Контроллер страницы категории (/category/1)
  *
  *
  */
@@ -41,9 +41,7 @@ function indexAction ($smarty){
 
     $rsCategories = getAllMainCatsWithChildren();
 
-    //d($rsCategory);
     $smarty->assign('pageTitle', 'Товарі категории ' . $rsCategory['name']);
-    $smarty->assign('pageTitle', 'Товары категории ' . $rsCategory['name']);
 
     $smarty->assign('rsCategories', $rsCategories);
     $smarty->assign('rsProducts', $rsProducts);

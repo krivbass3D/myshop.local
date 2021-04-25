@@ -10,10 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Добавлена страница вывода продуктов">
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Реализовано ЧПУ /а-z/0-9/">
+      <change afterPath="$PROJECT_DIR$/controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/default/product.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/default/leftcolumn.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/www/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ProductsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProductsModel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
       <workItem from="1619287639105" duration="2209000" />
       <workItem from="1619290159722" duration="1788000" />
       <workItem from="1619296572173" duration="2650000" />
-      <workItem from="1619325787375" duration="20229000" />
+      <workItem from="1619325787375" duration="21910000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -70,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619370634616</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Реализовано ЧПУ /а-z/0-9/">
+      <created>1619375756131</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619375756131</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +100,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init начало" />
     <MESSAGE value="Добавлена страница вывода продуктов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница вывода продуктов" />
+    <MESSAGE value="Реализовано ЧПУ /а-z/0-9/" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано ЧПУ /а-z/0-9/" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1619326219347">
@@ -102,10 +112,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="830" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619178573977" />
-    <state x="1153" y="429" key="NewPhpFileDialog" timestamp="1619358823850">
+    <state x="1153" y="429" key="NewPhpFileDialog" timestamp="1619375796315">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1153" y="429" key="NewPhpFileDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619358823850" />
+    <state x="1153" y="429" key="NewPhpFileDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619375796315" />
     <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619177106201" />
     <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619178522448">
       <screen x="0" y="0" width="1920" height="1160" />
