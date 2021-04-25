@@ -11,11 +11,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Init начало">
-      <change afterPath="$PROJECT_DIR$/views/default/index.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/CategoriesModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/ProductsModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myshop.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/default/category.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/default/footer.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/default/header.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/articles" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/11.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/products/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/js/jquery-1.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/templates/default/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/mainFunction.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/mainFunction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/default/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/index.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +75,13 @@
       <workItem from="1619167039011" duration="5616000" />
       <workItem from="1619178433336" duration="1301000" />
       <workItem from="1619180511716" duration="1632000" />
+      <workItem from="1619262321373" duration="8000" />
+      <workItem from="1619262330291" duration="152000" />
+      <workItem from="1619268110305" duration="1098000" />
+      <workItem from="1619287639105" duration="2209000" />
+      <workItem from="1619290159722" duration="1788000" />
+      <workItem from="1619296572173" duration="2650000" />
+      <workItem from="1619325787375" duration="17025000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -82,17 +113,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="Init начало" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1619326219347">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619326219347" />
     <state x="830" y="478" key="Github.ShareDialog" timestamp="1619178573977">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="830" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619178573977" />
-    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1619177106201">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="1153" y="429" key="NewPhpFileDialog" timestamp="1619358823850">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="1153" y="429" key="NewPhpFileDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619358823850" />
     <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619177106201" />
     <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619178522448">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619178522448" />
+    <state x="211" y="298" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1619271272409">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="211" y="298" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619271272409" />
   </component>
 </project>

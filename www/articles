@@ -1,0 +1,226 @@
+<?
+
+
+
+  require_once '../share/session.inc';
+  include '../share/articles.inc';
+  $article_id = get_item_id_from_url ();
+  if (!empty ($article_id))
+  {
+    $query = '' . 'select user_id, username, login, articles_sections.id as section_id, name, title, body, added_time from articles inner join articles_sections on articles.section_id = articles_sections.id inner join users on articles.user_id = users.id where articles.id = \'' . $article_id . '\' limit 1';
+    $res = db_query ($query);
+    if (db_numrows ($res))
+    {
+      $row = db_fetch_array ($res);
+      extract ($row);
+      $query = '' . 'update articles set views = views + 1 where id = \'' . $article_id . '\' limit 1';
+      db_query ($query);
+      $title = ucfirst ($title);
+      $header_title = $title . ' // ' . $header_title;
+      $html_description = ucfirst (substr ($body, 0, 200));
+      if (200 < strlen ($body))
+      {
+        $html_description .= '...';
+      }
+    }
+    else
+    {
+      unset ($article_id);
+    }
+  }
+
+  if (((!empty ($_SESSION['user']['id']) AND !empty ($article_id)) AND !empty ($_REQUEST['action'])))
+  {
+    switch ($_REQUEST['action'])
+    {
+      case 'add_comment':
+      {
+        $result = add_article_comment ($article_id, $_SESSION['user']['id'], $_POST['comment']);
+        if ($result == 1)
+        {
+          redirect ('/articles/' . $article_id . '.html#comments');
+        }
+
+        break;
+      }
+
+      case 'edit_comment':
+      {
+        $comment = get_article_comment ($article_id, $_SESSION['user']['id'], $_GET['id']);
+        break;
+      }
+
+      case 'update_comment':
+      {
+        $result = update_article_comment ($article_id, $_SESSION['user']['id'], $_POST['comment_id'], $_POST['comment']);
+        if ($result == 1)
+        {
+          redirect ('/articles/' . $article_id . '.html#comments');
+        }
+
+        break;
+      }
+
+      case 'delete_comment':
+      {
+        $result = delete_article_comment ($article_id, $_SESSION['user']['id'], $_GET['id']);
+        if ($result == 1)
+        {
+          redirect ('/articles/' . $article_id . '.html#comments');
+        }
+
+        break;
+      }
+    }
+  }
+
+  if (!empty ($article_id))
+  {
+    $page_title = $title;
+    $header_title = $page_title . ' // ������';
+  }
+  else
+  {
+    $page_title = '������';
+    $header_title = $page_title;
+  }
+
+  include './includes/header.inc';
+  echo '<div class="title_box_brown2">';
+  echo $page_title;
+  echo '</div>
+';
+  if (!empty ($article_id))
+  {
+    echo '<div class="bl_white">
+<div class="right_white_box_2">
+<div style="text-align: justify">';
+    echo_text ($body, 2);
+    echo '</div>
+<br /><br />
+<div>
+<div style="float: left">������ �������: ';
+    show_username ($user_id, $login, $username);
+    echo '</div>
+<div style="float: right">';
+    echo '<s';
+    echo 'pan class="f_gray">';
+    echo_timestamp_date ($added_time);
+    echo '</span></div>
+</div>
+<br /><br /><br />
+<div align="right"><b>������������� ���������� ����� �������� ������ � ��������� �������� �����������.</b></div>
+</div>
+';
+    $url = '/articles/' . $article_id . '.html';
+    if (!empty ($_SESSION['user']['id']))
+    {
+      print_add_comment_form ($url, $comment, $_GET['id']);
+    }
+
+    $comments = set_articles_comments_list ($article_id);
+    if (!empty ($comments))
+    {
+      echo '<a name="comments"></a>
+<div class="title2">�����������</div>
+';
+      print_comments ($url, $comments);
+    }
+
+    echo '</div>
+';
+  }
+  else
+  {
+    echo '<div class="uplm_yellow_nopad3">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td>
+<b>��������:</b><br /><br />
+<form action="/articles/">
+';
+    echo '<s';
+    echo 'elect name="section_id" OnChange="document.location.href = \'/articles/?section_id=\' + this.value">
+<option value="0">��� ������</option>
+';
+    $query = 'select distinct(section_id) as nav_section_id, name from articles inner join articles_sections on articles.section_id = articles_sections.id order by name';
+    $res = db_query ($query);
+    while ($row = db_fetch_array ($res))
+    {
+      extract ($row);
+      echo '<option value="';
+      echo $nav_section_id;
+      echo '">';
+      echo $name;
+      echo '</option>
+';
+    }
+
+    echo '</select>
+<noscript>&nbsp;&nbsp;<input type="submit" value="���������"></noscript>
+</form>
+</td>
+<td align="right">
+<b><a href="/support/">�������� ������</a></b>
+</td>
+</tr>
+</table>
+<br />
+</div>
+';
+    if (!empty ($_GET['section_id']))
+    {
+      $section_id = (int)$_GET['section_id'];
+    }
+
+    $query = 'select articles.id as id, section_id, name, title, brief, (select count(*) from articles_comments where article_id = articles.id) as comments_count, views, added_time, to_days(now()) - to_days(from_unixtime(added_time)) as days_diff, user_id, login from articles inner join articles_sections on articles.section_id = articles_sections.id inner join users on articles.user_id = users.id where articles.moderated = 1 ';
+    if (!empty ($section_id))
+    {
+      $query .= '' . 'and section_id = \'' . $section_id . '\' ';
+    }
+
+    $query .= 'order by added_time desc, articles.id desc';
+    $res = db_query ($query);
+    if (db_numrows ($res))
+    {
+      while ($row = db_fetch_array ($res))
+      {
+        extract ($row);
+        echo '<div class="articles_box">
+<div class="ab_text">
+<a href="/articles/';
+        echo $id;
+        echo '.html"><b class="adver_title">';
+        echo ucfirst ($title);
+        echo '</b></a><br /><div class="f_gray">';
+        echo $name;
+        echo '</div><br /><br />
+';
+        echo_text ($brief, (empty ($_SESSION['user']['id']) ? 1 : 2));
+        echo '</div>
+<div class="ab_autor">������ ������� <a href="/users/';
+        echo $login;
+        echo '/" class="a3"><b>';
+        echo $login;
+        echo '</b></a>, ';
+        echo_time ($added_time, $days_diff);
+        echo '</div>
+<div class="ab_stat">���������: ';
+        echo $views;
+        echo ', <a href="/articles/';
+        echo $id;
+        echo '.html#comments">�����������: ';
+        echo $comments_count;
+        echo '</a></div>
+</div>
+';
+      }
+    }
+    else
+    {
+      echo '<div class="right_white_box_2">��� ������, ��������������� ���������� �������.</div>';
+    }
+  }
+
+  include './includes/footer.inc';
+?>
