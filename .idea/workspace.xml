@@ -10,37 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Init начало">
-      <change afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/CategoriesModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/ProductsModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myshop.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/default/category.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/default/footer.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/default/header.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/articles" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/11.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/products/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/js/jquery-1.7.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/templates/default/css/main.css" afterDir="false" />
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Добавлена страница вывода продуктов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/mainFunction.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/mainFunction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/default/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/index.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/default/leftcolumn.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/www/.htaccess" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +54,7 @@
       <workItem from="1619287639105" duration="2209000" />
       <workItem from="1619290159722" duration="1788000" />
       <workItem from="1619296572173" duration="2650000" />
-      <workItem from="1619325787375" duration="17025000" />
+      <workItem from="1619325787375" duration="20229000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -90,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619178505570</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлена страница вывода продуктов">
+      <created>1619370634616</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619370634616</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +90,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init начало" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init начало" />
+    <MESSAGE value="Добавлена страница вывода продуктов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница вывода продуктов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1619326219347">
