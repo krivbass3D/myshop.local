@@ -10,12 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Реализовано ЧПУ /а-z/0-9/">
-      <change afterPath="$PROJECT_DIR$/controllers/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/default/product.tpl" afterDir="false" />
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Страница продукті">
+      <change afterPath="$PROJECT_DIR$/controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ProductsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProductsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/default/header.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/header.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/default/leftcolumn.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/www/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,7 +59,11 @@
       <workItem from="1619287639105" duration="2209000" />
       <workItem from="1619290159722" duration="1788000" />
       <workItem from="1619296572173" duration="2650000" />
-      <workItem from="1619325787375" duration="21910000" />
+      <workItem from="1619325787375" duration="22220000" />
+      <workItem from="1619547929174" duration="2863000" />
+      <workItem from="1619585518553" duration="600000" />
+      <workItem from="1619631238295" duration="2499000" />
+      <workItem from="1619671400709" duration="1106000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -79,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619375756131</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Страница продукті">
+      <created>1619377663742</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619377663742</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,7 +115,8 @@
     <MESSAGE value="Init начало" />
     <MESSAGE value="Добавлена страница вывода продуктов" />
     <MESSAGE value="Реализовано ЧПУ /а-z/0-9/" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовано ЧПУ /а-z/0-9/" />
+    <MESSAGE value="Страница продукті" />
+    <option name="LAST_COMMIT_MESSAGE" value="Страница продукті" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1619326219347">
@@ -112,18 +127,27 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="830" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619178573977" />
-    <state x="1153" y="429" key="NewPhpFileDialog" timestamp="1619375796315">
+    <state x="673" y="247" key="NewPhpClassDialog" timestamp="1619549714958">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1153" y="429" key="NewPhpFileDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619375796315" />
-    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619177106201" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619178522448">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="673" y="247" key="NewPhpClassDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619549714958" />
+    <state x="1153" y="429" key="NewPhpFileDialog" timestamp="1619549729072">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="1153" y="429" key="NewPhpFileDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619549729072" />
+    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619177106201" />
+    <state x="552" y="283" key="Vcs.Push.Dialog.v2" timestamp="1619377693362">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="283" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619377693362" />
     <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619178522448" />
     <state x="211" y="298" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1619271272409">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="211" y="298" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619271272409" />
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1619633245382">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1619633245382" />
   </component>
 </project>
