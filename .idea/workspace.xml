@@ -10,15 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Установлен smarty">
-      <change afterPath="$PROJECT_DIR$/views/default/cart.tpl" afterDir="false" />
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Добавлена корзина">
+      <change afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/UsersModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ProductsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProductsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/default/product.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/product.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/default/leftcolumn.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,8 @@
       <workItem from="1619769744234" duration="302000" />
       <workItem from="1619770060247" duration="33000" />
       <workItem from="1619770138863" duration="1734000" />
-      <workItem from="1619772487961" duration="9143000" />
+      <workItem from="1619772487961" duration="9219000" />
+      <workItem from="1619786646430" duration="2872000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -66,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619178505570</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавлена корзина">
+      <created>1619786515072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619786515072</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,21 +90,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init начало" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init начало" />
+    <MESSAGE value="Добавлена корзина" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена корзина" />
   </component>
   <component name="WindowStateProjectService">
     <state x="830" y="478" key="Github.ShareDialog" timestamp="1619178573977">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="830" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619178573977" />
-    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1619177106201">
+    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1619790180151">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619177106201" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619178522448">
+    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619790180151" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619786546632">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619178522448" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619786546632" />
     <state x="734" y="66" width="585" height="534" key="find.popup" timestamp="1619782871448">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
