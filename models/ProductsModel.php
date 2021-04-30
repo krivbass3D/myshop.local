@@ -64,3 +64,23 @@ function getProductById ($itemId)
     $rs = $mysqli->query($sql);
     return $rs->fetch_assoc();
 }
+
+/**
+ * Получить список продуктов из массива идентификаторов
+ *
+ * @param $itemsIds
+ * @return array|false
+ */
+function getProductsFromArray ($itemsIds)
+{
+    include '../config/db.php'; // инициализация БД
+
+    $strIds = implode( ',',$itemsIds);
+    $sql = "SELECT *
+            FROM products
+            WHERE id in ({$strIds})
+    ";
+    $rs = $mysqli->query($sql);
+
+    return createSmartyRsArray($rs);
+}

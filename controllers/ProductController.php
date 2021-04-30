@@ -28,12 +28,16 @@ function indexAction ($smarty){
     //получить все категории
     $rsCategories = getAllMainCatsWithChildren();
 
+    $smarty->assign('itemInCart',0);
+    if (in_array($itemId, $_SESSION['cart'])){
+        $smarty->assign('itemInCart',1);
+    }
 
     //если главная категория то показіваем дочернии категории
     //иначе показіваем товар
 
 
-    $smarty->assign('pageTitle', '');
+    $smarty->assign('pageTitle', 'Продукты');
     $smarty->assign('rsCategories', $rsCategories);
     $smarty->assign('rsProduct', $rsProduct);
 
