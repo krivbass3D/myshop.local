@@ -141,3 +141,17 @@ function updateUserData($name, $phone, $adress, $pwd1, $pwd2, $curPwd)
 
     return $rs;
 }
+
+
+/**
+ * Получение данного заказа текущего пользователя
+ *
+ * @return mixed
+ */
+function getCurUserOrders()
+{
+    $userId = isset($_SESSION['user']['id']) ? $_SESSION['user']['id'] : 0;
+    $rs = getOrderWithProductsByUser($userId);
+
+    return $rs;
+}

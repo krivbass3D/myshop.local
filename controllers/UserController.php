@@ -9,6 +9,8 @@
 //Подключаем модели
 include_once '../models/CategoriesModel.php';
 include_once '../models/UsersModel.php';
+include_once '../models/OrdersModel.php';
+include_once '../models/PurchaseModel.php';
 
 function registerAction (){
 
@@ -97,10 +99,15 @@ function indexAction ($smarty){
     if (! isset($_SESSION['user'])){
         redirect('/');
     }
+    //получаем список категорий для меню
     $rsCategories = getAllMainCatsWithChildren();
 
+    //получаем список заказов пользователя
+    $rsUserOrders = getCurUserOrders();
+    //d($rsUserOrders);
     $smarty->assign('pageTitle', 'Страница пользователя');
     $smarty->assign('rsCategories', $rsCategories);
+    $smarty->assign('rsUserOrders', $rsUserOrders);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'user');
