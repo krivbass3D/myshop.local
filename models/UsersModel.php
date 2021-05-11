@@ -96,3 +96,48 @@ function loginUser($email, $pwd){
 
     return $rs;
 }
+
+/**
+ * Изменение данных пользователя
+ *
+ * @param string $name имя пользователя
+ * @param string $adress
+ * @param string $pwd1
+ * @param string $pwd2
+ * @param string$curPwd
+ * @return boolean TRUE в случае успеха
+ */
+function updateUserData($name, $phone, $adress, $pwd1, $pwd2, $curPwd)
+{
+    include '../config/db.php'; // инициализация БД
+
+    $email = htmlspecialchars($mysqli->real_escape_string($_SESSION['user']['email']));
+    $name = htmlspecialchars($mysqli->real_escape_string($name));
+    $phone = htmlspecialchars($mysqli->real_escape_string($phone));
+    $adress = htmlspecialchars($mysqli->real_escape_string($adress));
+    $pwd1 = trim($pwd1);
+    $pwd2 = trim($pwd2);
+
+    $newPwd = null;
+    if ($pwd1 && ($pwd1==$pwd2)){
+        $newPwd = md5($pwd1);
+    }
+
+    $sql = "UPDATE users
+            SET ";
+
+    if ($newPwd){
+        $sql .= "`pwd` = '{$newPwd}', ";
+    }
+
+    $sql .= " `name` = '{$name}',
+              `phone` = '{$phone}',
+              `adress` = '{$adress}'
+            WHERE 
+                `email` = '{$email}' AND `pwd` = '{$curPwd}'
+            LIMIT 1";
+
+    $rs = $mysqli->query($sql);
+
+    return $rs;
+}

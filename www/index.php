@@ -14,6 +14,11 @@ include_once '../library/mainFunction.php'; // Основные функции
 $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Index';
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
 
+// если в сессии есть данные об авторизации пользователя то передаем их в шаблон
+if(isset($_SESSION['user'])){
+    $smarty->assign('arUser', $_SESSION['user']);
+}
+
 //инициализируем переменную шаблонизатора кол-ва эл-тов в корзине
 $smarty->assign('cartCntItems', count($_SESSION['cart']));
 
