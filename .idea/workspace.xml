@@ -10,11 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Добавлена корзина">
-      <change afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/UsersModel.php" afterDir="false" />
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="4.2 Эксперт PHP: Регистрация пользователей">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/mainFunction.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/mainFunction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UsersModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/default/leftcolumn.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +57,14 @@
       <workItem from="1619770138863" duration="1734000" />
       <workItem from="1619772487961" duration="9219000" />
       <workItem from="1619786646430" duration="2872000" />
+      <workItem from="1619793084080" duration="42000" />
+      <workItem from="1620627373459" duration="1627000" />
+      <workItem from="1620629193783" duration="183000" />
+      <workItem from="1620629392541" duration="601000" />
+      <workItem from="1620630220046" duration="429000" />
+      <workItem from="1620645191002" duration="12414000" />
+      <workItem from="1620713139121" duration="172000" />
+      <workItem from="1620713397167" duration="1351000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -70,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619786515072</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4.2 Эксперт PHP: Регистрация пользователей">
+      <created>1619793109699</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619793109699</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +108,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init начало" />
     <MESSAGE value="Добавлена корзина" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена корзина" />
+    <MESSAGE value="4.2 Эксперт PHP: Регистрация пользователей" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.2 Эксперт PHP: Регистрация пользователей" />
   </component>
   <component name="WindowStateProjectService">
     <state x="830" y="478" key="Github.ShareDialog" timestamp="1619178573977">
@@ -102,14 +120,14 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619790180151" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619786546632">
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619793121810">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619786546632" />
-    <state x="734" y="66" width="585" height="534" key="find.popup" timestamp="1619782871448">
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619793121810" />
+    <state x="734" y="66" width="856" height="558" key="find.popup" timestamp="1620658593897">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="734" y="66" width="585" height="534" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1619782871448" />
+    <state x="734" y="66" width="856" height="558" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1620658593897" />
     <state x="616" y="270" key="run.anything.popup" timestamp="1619785429818">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
