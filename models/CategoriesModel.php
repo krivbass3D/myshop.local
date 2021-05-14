@@ -64,3 +64,72 @@ function getCatById($catId)
 
     return $rs->fetch_assoc();
 }
+
+
+/**
+ * Получить все главные категории которые не дочерние
+ *
+ * @return array массив категорий
+ */
+function getAllMainCategories()
+{
+    include '../config/db.php'; // инициализация БД
+    $sql = 'SELECT *
+                FROM categories
+                WHERE parent_id = 0';
+    $rs = $mysqli->query($sql);
+
+    return createSmartyRsArray($rs);
+}
+
+function insertCat($catName, $catParentId = 0)
+{
+    include '../config/db.php'; // инициализация БД
+    $sql = "INSERT INTO
+                categories (`parent_id`,`name`)
+            VALUE ('{$catParentId}', '{$catName}')";
+
+    $rs = $mysqli->query($sql);
+
+    return $mysqli->insert_id;
+}
+
+/**
+ * Получить все категории которые не дочерние
+ *
+ * @return array массив категорий
+ */
+function getAllCategories()
+{
+    include '../config/db.php'; // инициализация БД
+    $sql = 'SELECT *
+                FROM categories
+                ORDER BY parent_id ASC';
+    $rs = $mysqli->query($sql);
+
+    return createSmartyRsArray($rs);
+}
+
+function updateCategoryData($itemId, $parentId = -1, $newName = " ")
+{
+
+    include '../config/db.php'; // инициализация БД
+    $set = array();
+
+    if ($newName){
+        $set[] = "`name` = '{$newName}'";
+    }
+
+    if ($parentId){
+        $set[] = "`parent_id` = '{$parentId}'";
+    }
+
+    $setStr = implode(", ", $set );
+    $sql = " UPDATE categories
+                SET {$setStr}
+                WHERE id = '{$itemId}'";
+
+    $rs = $mysqli->query($sql);
+
+    return $rs;
+}

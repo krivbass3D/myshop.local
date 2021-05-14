@@ -6,18 +6,40 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Страница пользователя">
-      <change afterPath="$PROJECT_DIR$/models/OrdersModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/PurchaseModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/default/order.tpl" afterDir="false" />
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Страница заказов">
+      <change afterPath="$PROJECT_DIR$/controllers/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin/admin.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin/adminCategory.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin/adminFooter.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin/adminHeader.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin/adminLeftcolumn.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin/adminProducts.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/templates/admin/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/templates/admin/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/UsersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/CategoriesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/CategoriesModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ProductsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProductsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/templates/default/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/templates/default/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +48,14 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,8 +69,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\OpenServer\domains\myshop.local\www\templates\admin\css" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,7 +101,12 @@
       <workItem from="1620630220046" duration="429000" />
       <workItem from="1620645191002" duration="12414000" />
       <workItem from="1620713139121" duration="172000" />
-      <workItem from="1620713397167" duration="24869000" />
+      <workItem from="1620713397167" duration="30936000" />
+      <workItem from="1620826361838" duration="1415000" />
+      <workItem from="1620903398216" duration="50000" />
+      <workItem from="1620903466356" duration="887000" />
+      <workItem from="1620905193176" duration="12543000" />
+      <workItem from="1620973455651" duration="8017000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -102,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620723198140</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Страница заказов">
+      <created>1620744033070</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620744033070</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +161,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -126,25 +186,26 @@
     <MESSAGE value="4.2 Эксперт PHP: Регистрация пользователей" />
     <MESSAGE value="Регистрация и авторизация пользователя" />
     <MESSAGE value="Страница пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="Страница пользователя" />
+    <MESSAGE value="Страница заказов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Страница заказов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="830" y="478" key="Github.ShareDialog" timestamp="1619178573977">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="830" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619178573977" />
-    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1620734102867">
+    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1620799335711">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1620734102867" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1619793121810">
+    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1620799335711" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1620744040136">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1619793121810" />
-    <state x="563" y="212" width="856" height="838" key="find.popup" timestamp="1620742464666">
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1620744040136" />
+    <state x="642" y="233" width="856" height="838" key="find.popup" timestamp="1620977083387">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="563" y="212" width="856" height="838" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1620742464666" />
+    <state x="642" y="233" width="856" height="838" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1620977083387" />
     <state x="616" y="270" key="run.anything.popup" timestamp="1619785429818">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

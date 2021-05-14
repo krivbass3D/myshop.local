@@ -84,3 +84,85 @@ function getProductsFromArray ($itemsIds)
 
     return createSmartyRsArray($rs);
 }
+
+/**
+ * Получить все продукты
+ *
+ * @param $itemId
+ * @return mixed
+ */
+function getProducts()
+{
+    include '../config/db.php'; // инициализация БД
+
+    $sql = "SELECT *
+                FROM `products`
+                ORDER BY category_id";
+
+    $rs = $mysqli->query($sql);
+
+    return createSmartyRsArray($rs);
+}
+
+function insertProduct($itemName, $itemPrice, $itemDesc, $itemCat)
+{
+    include '../config/db.php'; // инициализация БД
+    $sql = "INSERT INTO 
+                products (`category_id`,`name`, `description`,
+                          `price`)
+                VALUE ('{$itemCat}', '{$itemName}','{$itemDesc}', '{$itemPrice}')";
+
+    $rs = $mysqli->query($sql);
+
+    return $rs;
+}
+
+function updateProduct($itemId, $itemName, $itemPrice, $itemStatus, $itemDesc, $itemCat, $newFileName = null)
+{
+    include '../config/db.php'; // инициализация БД
+    //$set[] = array();
+
+    if($itemName){
+        $set[] = "`name` = '{$itemName}'";
+    }
+
+    if($itemPrice>0){
+        $set[] = "`price` = '{$itemPrice}'";
+    }
+
+    if($itemStatus !==null){
+        $set[] = "`status` = '{$itemStatus}'";
+    }
+
+    if($itemDesc){
+        $set[] = "`description` = '{$itemDesc}'";
+    }
+
+    if($itemCat){
+        $set[] = "`category_id` = '{$itemCat}'";
+    }
+
+    if($newFileName){
+        $set[] = "`image` = '{$newFileName}'";
+    }
+
+    $setStr = implode(", ", $set);
+
+    $sql = "UPDATE products
+            SET {$setStr}
+            WHERE id = '{$itemId}'";
+
+    $rs = $mysqli->query($sql);
+
+    return $rs;
+
+}
+
+function updateProductImage($itemId, $newFileName)
+{
+    d($newFileName);
+    $rs = updateProduct($itemId,null,null,
+                        null,null,null, $newFileName);
+
+    return $rs;
+}
