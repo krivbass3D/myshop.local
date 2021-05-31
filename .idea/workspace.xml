@@ -1,45 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <expand />
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Страница заказов">
-      <change afterPath="$PROJECT_DIR$/controllers/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/admin.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/adminCategory.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/adminFooter.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/adminHeader.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/adminLeftcolumn.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/adminProducts.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/templates/admin/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/templates/admin/js/admin.js" afterDir="false" />
+    <list default="true" id="1438f8dd-3088-496e-b42a-9a68c362338f" name="Default Changelist" comment="Страница редактирования продуктов">
+      <change afterPath="$PROJECT_DIR$/views/admin/adminOrders.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/admin/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/CategoriesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/CategoriesModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ProductsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ProductsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/templates/default/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/templates/default/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/OrdersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/OrdersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myshop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/myshop.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/templates/admin/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/templates/admin/js/admin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +27,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -66,6 +40,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -106,7 +81,18 @@
       <workItem from="1620903398216" duration="50000" />
       <workItem from="1620903466356" duration="887000" />
       <workItem from="1620905193176" duration="12543000" />
-      <workItem from="1620973455651" duration="8017000" />
+      <workItem from="1620973455651" duration="8097000" />
+      <workItem from="1621339929830" duration="638000" />
+      <workItem from="1622035658587" duration="154000" />
+      <workItem from="1622036172537" duration="703000" />
+      <workItem from="1622039322092" duration="2112000" />
+      <workItem from="1622095183189" duration="598000" />
+      <workItem from="1622186896518" duration="167000" />
+      <workItem from="1622187880471" duration="596000" />
+      <workItem from="1622188880634" duration="3341000" />
+      <workItem from="1622192840981" duration="410000" />
+      <workItem from="1622194231228" duration="1510000" />
+      <workItem from="1622442467348" duration="5005000" />
     </task>
     <task id="LOCAL-00001" summary="Init начало">
       <created>1619178505570</created>
@@ -150,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620744033070</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Страница редактирования продуктов">
+      <created>1620982335952</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620982335952</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,21 +180,22 @@
     <MESSAGE value="Регистрация и авторизация пользователя" />
     <MESSAGE value="Страница пользователя" />
     <MESSAGE value="Страница заказов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Страница заказов" />
+    <MESSAGE value="Страница редактирования продуктов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Страница редактирования продуктов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="830" y="478" key="Github.ShareDialog" timestamp="1619178573977">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="830" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1619178573977" />
-    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1620799335711">
+    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1622188983746">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1620799335711" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1620744040136">
+    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1622188983746" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1621341058277">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1620744040136" />
+    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1621341058277" />
     <state x="642" y="233" width="856" height="838" key="find.popup" timestamp="1620977083387">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

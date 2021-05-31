@@ -127,3 +127,57 @@ function updateProduct(itemId){
         }
     });
 }
+
+/**
+ * Изменение статуса заказа
+ *
+ */
+function updateOrderStatus(itemId) {
+    var status = $('#itemStatus_'+ itemId).attr('checked');
+    if (! status){
+        status = 0
+    }else {
+        status = 1
+    }
+
+    var postData = {itemId: itemId, status: status}
+
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: "/admin/setorderstatus/",
+        data: postData,
+        dataType: 'json',
+        success: function(data){
+            if ( ! data['success']){
+                alert(data['message']);
+            }
+        }
+    });
+}
+
+
+/**
+ * Изменение информации об оплате заказа
+ *
+ * @param itemId
+ */
+function updateDatePayment(itemId) {
+    var datePayment = $('#datePayment_'+ itemId).val();
+
+    var postData = {itemId: itemId, datePayment: datePayment};
+
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: "/admin/setorderdatepayment/",
+        data: postData,
+        dataType: 'json',
+        success: function(data){
+            if ( ! data['success']){
+                alert(data['message']);
+            }
+        }
+    });
+}
+

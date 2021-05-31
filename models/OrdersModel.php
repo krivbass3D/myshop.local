@@ -83,3 +83,67 @@ function getOrderWithProductsByUser($userId)
 
     return $smartyRs;
 }
+
+function getOrders()
+{
+
+    include '../config/db.php'; // инициализация БД
+    $sql = "SELECT o.*, u.name, u.email, u.phone, u.adress
+            FROM orders AS `o`
+            LEFT JOIN users AS `u` ON o.user_id = u.id
+            ORDER BY id DESC";
+
+    $rs = $mysqli->query($sql);
+
+    while ($row = $rs->fetch_assoc()) {
+
+        $rsChildren = getProductsForOrder ($row['id']);
+       // d($rsChildren);
+        if ($rsChildren){
+            $row['children'] = $rsChildren;
+            $smartyRs[] = $row;
+        }
+
+    }
+
+    return $smartyRs;
+}
+
+function getProductsForOrder($orderId)
+{
+    include '../config/db.php'; // инициализация БД
+    $sql = "SELECT *
+            FROM purchase AS pe
+            LEFT JOIN products AS ps
+                ON pe.product_id = ps.id
+            WHERE (`order_id` = '{$orderId}')";
+
+    $rs = $mysqli->query($sql);
+
+    return createSmartyRsArray($rs);
+}
+
+function updateOrderStatus($itemId, $status)
+{
+    include '../config/db.php'; // инициализация БД
+    $status = intval($status);
+    $sql = "UPDATE orders
+            SET `status` = '{$status}'
+            WHERE id= '{$itemId}'";
+
+    $rs = $mysqli->query($sql);
+
+    return $rs;
+}
+
+function updateOrederDatePayment($itemId, $datePayment)
+{
+    include '../config/db.php'; // инициализация БД
+
+    $sql = "UPDATE orders
+            SET `date_payment` = '{$datePayment}'
+            WHERE id= '{$itemId}'";
+
+    $rs = $mysqli->query($sql);
+    return $rs;
+}

@@ -166,7 +166,7 @@ function uploadAction()
 
         //Если файл загружен то перемещаем его из временной папки в конечную
         $res = move_uploaded_file($_FILES['filename']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . '/images/products/' . $newFileName);
-        d($itemId, $newFileName);
+        //d($itemId, $newFileName);
         if($res){
             $res = updateProductImage($itemId, $newFileName);
             if ($res){
@@ -177,3 +177,54 @@ function uploadAction()
         echo ("Ошибка загрузки файла");
     }
 }
+
+function ordersAction($smarty)
+{
+    $rsOrders = getOrders();
+
+    $smarty->assign('rsOrders', $rsOrders);
+    $smarty->assign('pageTitle', 'Заказы');
+
+    loadTemplate($smarty,'adminHeader');
+    loadTemplate($smarty,'adminOrders');
+    loadTemplate($smarty,'adminFooter');
+}
+
+function setorderstatusAction()
+{
+    $itemId = $_POST['itemId'];
+    $status = $_POST['status'];
+
+   $res = updateOrderStatus($itemId,$status);
+
+    if ($res){
+        $resData['success'] = 1;
+        $resData['message'] = 'Статус изменен';
+    }else{
+        $resData['success'] = 0;
+        $resData['message'] = 'Ошибки установки статуса';
+    }
+
+    echo json_encode($resData);
+    return;
+}
+
+function setorderdatepaymentAction()
+{
+    $itemId = $_POST['itemId'];
+    $datePayment = $_POST['datePayment'];
+
+    $res = updateOrederDatePayment($itemId, $datePayment);
+
+    if ($res){
+        $resData['success'] = 1;
+        $resData['message'] = 'Статус изменен';
+    }else{
+        $resData['success'] = 0;
+        $resData['message'] = 'Ошибки установки статуса';
+    }
+
+    echo json_encode($resData);
+    return;
+}
+
